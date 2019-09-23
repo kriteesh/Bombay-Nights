@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wink Your Tashan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script> -->
+    <style>
+        html,body{
+            margin : 0;
+            background : linear-gradient(45deg,indigo,#151515) fixed;
+            height : 100%;
+            width : 100%;
+        }
+        .dot{
+            border-radius : 50%;
+            position : absolute;
+            box-shadow : 0 0 40px yellow;
+            transition : 1s;
+        }
+
+        .blip{
+            animation : hop 1s ease-in-out 1;
+        }
+        
+        @keyframes hop{
+            50%{transform : scale(0.1)}
+        }
+
+    </style>
+</head>
+<body>
+</body>
+<script>
+
+    let dotMet = { size :50 , pos : {x : 100, y:100}, color : "yellow"};
+    let dot = document.createElement("div");
+        dot.className = 'dot';
+        dot.style.width = dot.style.height = dotMet.size + "px";
+        dot.style.left = dotMet.pos.x + "px";
+        dot.style.top = dotMet.pos.y + "px";
+        dot.style.background = dotMet.color;
+    
+    document.body.appendChild(dot);
+
+    let shift = () => {
+        dotMet.pos = {
+            x: Math.floor(document.body.clientWidth*0.2 + Math.random()*document.body.clientWidth*0.6),
+            y: Math.floor(document.body.clientWidth*0.2 + Math.random()*document.body.clientHeight*0.6)
+        }
+        dot.style.left = dotMet.pos.x + "px";
+        dot.style.top = dotMet.pos.y + "px";
+    }
+
+    window.onclick = function(){
+        dot.classList.add("blip");
+        shift();
+        setTimeout(function(){dot.classList.remove("blip")}, 1000);
+    }
+</script>
+</html>
