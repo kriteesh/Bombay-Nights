@@ -11,8 +11,82 @@ html,body{
     width : 90%; 
 }
 
-.area{
-    width : 40vw;
-    height : 40vh;
-    border : 1px dashed black;
+.header {
+    height: 8vh;
+    text-align: center;
+    font-size: 6vmin;
+    font-family: 'Khand',monospace;
+    width: 100vw;
+    color: #ffffff;
+    background: url('../assets/srivatsa.png'),linear-gradient(135deg,white 50%,#383838 50%);
+    background-size: 6vh,100% 100%;
+    background-position: 45vw,center;
+    background-repeat : no-repeat;
+    line-height: 8vh;
+    border-bottom: 2px solid black;
+    display : flex;
 }
+
+.header>div{
+    width : 50vw;
+    text-align : center;
+}
+
+.lefthead{
+    color : #131313;
+}
+.righthead{
+    color : white;
+}
+
+.area{
+    margin-top : 2vh;
+    width : 80vw;
+    height : 30vh;
+    border : 2px dashed black;
+    padding : 1vh 1vw;
+    margin-left : 10vw;
+    margin-right : 10vw;
+    outline : none;
+}
+.area:focus{
+    border-width : 4px;
+}
+
+.chooser{
+    margin-right: 30vw;
+    outline: none;
+    height: 6vh;
+    margin-top: 2vh;
+    text-align: center;
+    font-size: 4vmin;
+    text-align: center;
+    font-family: 'Khand',monospace;
+    width: 40vw;
+    background: none;
+    margin-left: 30vw;
+    background-size: 5px 5px;
+    font-family: 'Rajdhani',monospace;
+    line-height: 7vh;
+    border: 2px solid black;
+    box-shadow: 4px 5px 0 black;
+    padding-left : 3vw;
+}
+
+.options{
+    color : black;
+    font-family : 'Khand',monospace;
+}
+
+.reflection {
+    margin-top: 2vh;
+    width: 80vw;
+    height: 19vh;
+    /* box-shadow: 7px 8px black; */
+    border: 2px dotted black;
+    padding: 1vh 1vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    outline: none;
+}
+

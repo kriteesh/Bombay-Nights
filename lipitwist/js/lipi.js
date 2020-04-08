@@ -67,7 +67,27 @@ let hkToDev = (arr) => arr
 .replace(/्अं/g,"ं")
 .replace(/्अः/g,"ः");
 
-
+let hkToIast = (arr) => arr 
+.replace(/G/g, "ṅ")  
+.replace(/J/g, "ñ") 
+.replace(/Th/g, "ṭh")
+.replace(/T/g, "ṭ") 
+.replace(/Dh/g, "ḍh")  
+.replace(/D/g, "ḍ") 
+.replace(/N/g, "ṇ")  
+.replace(/z/g, "ś")
+.replace(/S/g, "ṣ") 
+.replace(/aM/g, "aṃ") 
+.replace(/aH/g, "aḥ")
+.replace(/A/g, "ā") 
+.replace(/I/g, "ī") 
+.replace(/U/g, "ū")  
+.replace(/lRR/g, "ḹ") 
+.replace(/RR/g, "ṝ") 
+.replace(/lR/g, "ḷ")
+.replace(/R/g, "ṛ") 
+.replace(/H/g, "ḥ")
+.replace(/M/g, "ṃ");
 
 let devToLang = (arr) => lang => arr
 .replace(/ँ/g,lang[0])
