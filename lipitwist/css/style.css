@@ -2,6 +2,7 @@ html,body{
     margin :0;
     width : 100%;
     height : 100%;
+    overflow : hidden;
 }
 
 .container{
@@ -9,27 +10,21 @@ html,body{
     flex-direction: column;
     height: 100%;
     width: 100%;
-    background-size: 12vh;
-    background-position: 50% 90%;
+    background-size: 15vh;
+    background-position: 51% 94%;
     background-repeat: no-repeat;
     background-image: url('../assets/bgMain.png');
 }
 
 .header {
-    
     height: 8vh;
     text-align: center;
-    font-size: 6vmin;
+    font-size: 5.5vmin;
     font-family: 'Khand',monospace;
     width: 100vw;
     color: #ffffff;
-    /* background-image: url('../assets/srivatsa.png'),radial-gradient(circle,transparent 1px,#ffffff6b 2px,transparent 3px),radial-gradient(circle,transparent 1px,#ffffff6b 2px,transparent 3px),linear-gradient(45deg,transparent 30%,white 30.1%,white 70%,transparent 70.1%),linear-gradient(135deg,#3a3a3a 30%,white 30.1%,white 70%,#3a3a3a 70.1%);
-    background-position: 50% 98%,center;
-    background-size: 80px 80px,4px 4px,8px 8px,100% 100%,100% 100%;
-    background-repeat: no-repeat,repeat;*/
     line-height: 8vh; 
-
-    background-image: url('../assets/srivatsa.png'),linear-gradient(45deg,transparent 45%,white 45.1%,white 55%,transparent 55.1%),linear-gradient(135deg,#3a3a3a 45%,white 45.1%,white 55%,#3a3a3a 55.1%);
+    background-image: url('../assets/srivatsa.png'),linear-gradient(45deg,transparent 43%,white 43.1%,white 57%,transparent 57.1%),linear-gradient(135deg,#3a3a3a 43%,white 43.1%,white 57%,#3a3a3a 57.1%);
     background-position: 50%,center;
     background-size: 6vh,100% 100%,100% 100%;
     background-repeat: no-repeat;
