@@ -1,15 +1,15 @@
 {
-    "name": "मस्त लेख प्रोडक्शंस",
-    "short_name": "मस्त लेख",
-    "theme_color": "#2196f3",
-    "background_color": "#2196f3",
+    "name": "लीपि ट्विस्ट",
+    "short_name": "लीपि ट्विस्ट",
+    "theme_color": "#131313",
+    "background_color": "white",
     "display": "standalone",
     "orientation": "portrait",
     "scope": "/",
-    "start_url": "pant.html",
+    "start_url": "index.html",
       "icons": [
       {
-        "src": "assets/fonts.png",
+        "src": "assets/srivatsa.png",
         "type": "image/png",
         "sizes": "192x192"
       }
