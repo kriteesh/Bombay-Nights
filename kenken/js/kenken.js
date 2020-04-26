@@ -85,7 +85,7 @@ looper = gr =>{
                     }
                     else if(toss==2){
                         y[3] = y[0]*gr[group[0][0]][group[0][1]][0];
-                        y[4] = 'x';
+                        y[4] = '✕';
                         z = create(cells[i + gr.length*j])('div')('celltop')({}); 
                         z.innerText = y[3] + y[4];
                     }

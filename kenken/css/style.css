@@ -11,7 +11,17 @@ html,body{
     display : flex;
     flex-direction : column;
 }
-
+.header{
+    height: 8vh;
+    font-size: 6vmin;
+    line-height: 8vh;
+    text-align: center;
+    font-family: 'Khand',monospace;
+    background-color: #3F51B5;
+    background-image: radial-gradient(circle,#9c27b069 2px,transparent 2px),linear-gradient(45deg,#E91E63, #3F51B5);
+    background-size: 4px 4px,100%;
+    color: white;
+}
 .game{
     display : grid;
     width : 80vmin;
@@ -24,6 +34,8 @@ html,body{
     color : #313131;
     font-size : 4vmin;
     user-select: none;
+    transition : 100ms;
+    background : white;
 }
 
 .cell>span{
@@ -32,8 +44,9 @@ html,body{
 }
 
 .clicked{
-    opacity : 0.7;
-    border-style: dashed;
+    transform : scale(1.08);
+    border : none;
+    box-shadow : 0 0 10px grey;
 }
 
 .pad{
@@ -60,6 +73,7 @@ html,body{
     transition : 100ms;
     cursor : pointer;
     user-select : none;
+    font-family: 'Khand',monospace;
 }
 
 .buttons:hover{

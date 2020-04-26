@@ -2,26 +2,37 @@ body = document.body;
 
 container = create(body)('div')('container')({});
 
+header = create(container)('div')('header')({});
+header.innerText = 'केन्-केन्';
+
+
 game = create(container)('div')('game')({});
 
 pad = create(container)('div')('pad')({});
+
+clicksound = new Audio('../assets/waterclick.mp3');
 
 if(screen.width < screen.height)
     {
         game.style.width = '90%';
         game.style.height = game.clientWidth ;
         game.style.marginLeft = '5%';
-        game.style.marginTop = '5vh';
+        game.style.marginTop = '2.5vh';
 
     }
 
 else{
-        game.style.height = '70vh';
-        game.style.width = game.clientHeight;
+        game.style.height = '80vh';
+        game.style.width = '80vh';
         game.style.marginLeft = '5vw';
-        game.style.marginTop = '5vh';
-        pad.style.width = "50%";
+        game.style.marginTop = '15vh';
+        pad.style.width = "30%";
         pad.style.setProperty('--size', "8vmin");
+        pad.style.marginTop = '15vh';
+        header.style.position ='absolute';
+        header.style.width = '100%';
+        header.style.height = '10vh';
+        header.style.lineHeight = '10vh';
         container.style.flexDirection = "row";
     }	
 
@@ -48,6 +59,7 @@ solution = mainGrid.join(",").split(",");
 cells.map((x,i)=>{
     x.style.height = x.style.width = x.style.lineHeight = w/order + "px";
     x.onclick = () => { 
+        clicksound.play();
         if(selectedCell!=null){
             unselected(cells[selectedCell]);
             selected(x);
@@ -71,6 +83,7 @@ padButtons = padButtons.map((x,i)=>{
 padButtons.map((x,i)=>{
     if(i<10){
         x.onclick = () =>{
+            clicksound.play();
             if(cells[selectedCell].children.length==0){
                 z = create(cells[selectedCell])('div')('cellette')({}); 
                 if(i<9) z.innerText = x.innerText;
@@ -102,35 +115,69 @@ padButtons.map((x,i)=>{
     }
     else if(i==10){
         x.onclick = () =>{
-            document.querySelectorAll('.cellette').forEach(e => e.remove());
+            
+            swal({
+                title: "ठहरिये",
+                text: "क्या आप मूल्याङ्कन करना चाहते है ?",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+              }).then((willDelete) => {
+                if (willDelete) document.querySelectorAll('.cellette').forEach(e => e.remove());
+              });
+          
         }
     }
 
     else if(i==11){
         x.onclick = () =>{
-            document.querySelectorAll('.cellette').forEach((e,i) => {
-                if(e.innerText ==solution[i]) e.style.background = "green";
-                else e.style.background = "red";
-            });
+            swal({
+                title: "ठहरिये",
+                text: "क्या आप मूल्याङ्कन करना चाहते है ?",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+              }).then((willDelete) => {
+                if (willDelete) {
+                    document.querySelectorAll('.cellette').forEach((e,i) => {
+                        if(e.innerText ==solution[i]) { e.style.background = "#9ec956"; e.style.color = "white";}
+                        else {e.style.background = "#e75903"; e.style.color = "white";}
+                    });
+                }
+              });
+
         }
     }
 
     else if(i==12){
         x.onclick = () =>{
-            document.querySelectorAll('.cellette').forEach(e => e.remove());
-            cells.map((y,j)=>{
-                if(y.children.length==0){
-                    z = create(y)('div')('cellette')({});
-                    z.innerText = solution[j] ;
+
+            swal({
+                title: "ठहरिये",
+                text: "क्या आप मूल्याङ्कन करना चाहते है ?",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+              }).then((willDelete) => {
+                if (willDelete) {
+                    document.querySelectorAll('.cellette').forEach(e => e.remove());
+                    cells.map((y,j)=>{
+                        if(y.children.length==0){
+                            z = create(y)('div')('cellette')({});
+                            z.innerText = solution[j] ;
+                        }
+                        else{
+                            z = create(y)('div')('cellette')({});
+                            z.innerText = solution[j] ;
+                            z.style.marginTop = "-50%";
+                            
+                        }
+                      
+                    })
                 }
-                else{
-                    z = create(y)('div')('cellette')({});
-                    z.innerText = solution[j] ;
-                    z.style.marginTop = "-50%";
-                    
-                }
-              
-            })
+              });
+            
+
         }
     }
     
