@@ -8,7 +8,7 @@ html,body{
 .gameLogo{
     background: url('../assets/iconMain.png') center no-repeat;
     height: 15vh;
-    background-size: 40vh;
+    background-size: 40vmin;
     width: 40vw;
 }
 .gameSelect{
@@ -21,6 +21,7 @@ html,body{
     flex-direction : column;
     justify-content: space-evenly;
     cursor : pointer;
+    user-select: none;
 }
 
 .levels{
@@ -57,6 +58,7 @@ html,body{
     background-image: radial-gradient(circle,#9c27b069 2px,transparent 2px),linear-gradient(45deg,#E91E63, #3F51B5);
     background-size: 4px 4px,100%;
     color: white;
+    user-select: none;
 }
 .game{
     display : grid;

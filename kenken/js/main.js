@@ -68,7 +68,7 @@ game = (order) => {
 
     mainGrid = generateGrid(order);
     grinder = looper(gridChanger(mainGrid));
-    solution = mainGrid.join(",").split(",");
+    solution = transpose(mainGrid).join(",").split(",");
 
     cells.map((x,i)=>{
         x.style.height = x.style.width = x.style.lineHeight = w/order + "px";

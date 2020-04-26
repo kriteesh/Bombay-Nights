@@ -8,9 +8,11 @@ let create = parent => tag => element => parameters => {
     return x;
 }
 
-vanish = el => el.display = "none"
+transpose = arr => arr.map((m,i)=>m.map((n,j)=>arr[j][i]));
 
-reappear = el => el.display = "initial"
+vanish = el => el.display = "none";
+
+reappear = el => el.display = "initial";
 
 randomColor = () =>{
         return 'rgb(' + (Math.floor(Math.random()*255) + ',' + Math.floor(Math.random()*255) + ',' + Math.floor(Math.random()*255)) + ')';
