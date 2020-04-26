@@ -5,6 +5,42 @@ html,body{
     overflow : hidden;
 }
 
+.gameLogo{
+    background: url('../assets/iconMain.png') center no-repeat;
+    height: 15vh;
+    background-size: 40vh;
+    width: 40vw;
+}
+.gameSelect{
+    position : absolute;
+    width : 40vw;
+    height : 80vh;
+    top : 5vh;
+    left : 30vw;
+    display : flex;
+    flex-direction : column;
+    justify-content: space-evenly;
+    cursor : pointer;
+}
+
+.levels{
+    background : #3F51B5;
+    text-align: center;
+    width : 40vw;
+    height : 10vh;
+    color : white;
+    font-family: 'Khand',monospace;
+    font-size : 6vmin;
+    line-height : 10vh;
+    transition : 100ms;
+    border-radius : 1vh;
+}
+
+.levels:hover,.levels:active{
+    transform : scale(1.1);
+    opacity : 0.8;
+}
+
 .container{
     height: 100%;
     width: 100%;

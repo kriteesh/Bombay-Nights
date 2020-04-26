@@ -4,10 +4,10 @@ self.addEventListener('install', function(e) {
       caches.open('airhorner').then(function(cache) {
         return cache.addAll([
           '/assets/icon.png',
+          '/assets/iconMain.png',
           '/manifest.json', 
           '/index.html',
           '/css/style.css',
-          '/js/data.js',
           '/js/common.js',
           '/js/main.js',
           '/js/kenken.js',
