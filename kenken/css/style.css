@@ -1,0 +1,84 @@
+html,body{
+    margin :0;
+    width : 100%;
+    height : 100%;
+    overflow : hidden;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display : flex;
+    flex-direction : column;
+}
+
+.game{
+    display : grid;
+    width : 80vmin;
+    height: 80vmin;
+}
+
+.cell{
+    border : 0.1px solid #131313;
+    text-align : center;
+    color : #313131;
+    font-size : 4vmin;
+    user-select: none;
+}
+
+.cell>span{
+    font-size : 4vmin;
+    line-height : inherit;
+}
+
+.clicked{
+    opacity : 0.7;
+    border-style: dashed;
+}
+
+.pad{
+    --size : 10vmin;
+    width : 90vw;
+    height : 20vmin;
+    display : flex;
+    flex-direction : row;
+    flex-wrap : wrap;
+    margin: 5vh 5vw;
+    justify-content: center;
+}
+
+.buttons{
+    color: white;
+    font-size: 4vmin;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: #3F51B5;
+    text-align: center;
+    line-height: var(--size);
+    margin: 2vmin 2vw;
+    transition : 100ms;
+    cursor : pointer;
+    user-select : none;
+}
+
+.buttons:hover{
+    opacity: 0.8;
+}
+
+.buttons:active{
+    transform : scale(1.1);
+}
+
+.celltop{
+    height: 50%;
+    font-size: 2.5vmin;
+    text-align: left;
+    padding-left: 0.5vmin;
+    line-height: 3vmin;
+}
+
+.cellette{
+   width : 100%;
+   height : 100%;
+}
