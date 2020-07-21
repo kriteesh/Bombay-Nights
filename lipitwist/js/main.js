@@ -33,12 +33,12 @@ area = create(container)('textarea')('area')({placeholder:'Type here..'});
 //     return y;
 // });
 
-devanagari.map((x,i)=>{
-    if(i<16){
-    y = create(guide)('div')('guidette')({});
-    y.innerText = devanagari[i] + " " + oriya[i];
-    }
-})
+// devanagari.map((x,i)=>{
+//     if(i<16){
+//     y = create(guide)('div')('guidette')({});
+//     y.innerText = devanagari[i] + " " + oriya[i];
+//     }
+// })
 
 chooser = create(container)('select')('chooser')({});
 
