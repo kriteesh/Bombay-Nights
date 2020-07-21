@@ -15,23 +15,23 @@ righthead.innerText = heading.split(" ")[1];
 
 area = create(container)('textarea')('area')({placeholder:'Type here..'});
 
-tablet_ = create(container)('div')('tablet')({});
+// tablet_ = create(container)('div')('tablet')({});
 
-tabs_ = ['Nasal Correction','Clear'].map(x=>{
-    y = create(tablet_)('div')('tabs')({});
-    y.innerText = x;
-    return y;
-});
+// tabs_ = ['Nasal Correction','Clear'].map(x=>{
+//     y = create(tablet_)('div')('tabs')({});
+//     y.innerText = x;
+//     return y;
+// });
 
-guide = create(container)('div')('guide')({});
+// guide = create(container)('div')('guide')({});
 
-tablet = create(container)('div')('tablet')({});
+// tablet = create(container)('div')('tablet')({});
 
-tabs = ['Previous','Next','Hide'].map(x=>{
-    y = create(tablet)('div')('tabs')({});
-    y.innerText =x;
-    return y;
-});
+// tabs = ['Previous','Next','Hide'].map(x=>{
+//     y = create(tablet)('div')('tabs')({});
+//     y.innerText =x;
+//     return y;
+// });
 
 devanagari.map((x,i)=>{
     if(i<16){
